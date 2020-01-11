@@ -11,7 +11,7 @@ addEventListener('load',async()=>{
     const strDate=date.toLocaleString('ja-JP',DATE_FORMAT).split('/').reduce((holder,value)=>holder+=value);
 
     courses=(await(await fetch('https://regbadminton.com/api/?d='+strDate)).json()).map(obj=>new Course(obj));
-    if(page>courses.length)location='https://cityofsurrey.perfectmind.com/23615/Menu/BookMe4BookingPages/Classes?calendarId=ec6defcd-4317-4bf3-a72e-a9c6b4e5c897&widgetId=15f6af07-39c5-473e-b053-96653f77a406&embed=False';
+    if(page>courses.length)location='rgbd.ca/0/';
     else location=courses[page-1].getURL();
 })
 
