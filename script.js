@@ -26,4 +26,4 @@ addEventListener('load', async()=>{
                       `&widgetId=15f6af07-39c5-473e-b053-96653f77a406`+
                       `&locationId=${courses[page - 1].locationID}`+
                       `&waitListMode=False`;
-})
+});
