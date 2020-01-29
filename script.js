@@ -1,5 +1,5 @@
 addEventListener('load', async()=>{
-    
+
     const pathname = location.pathname;
     const last = pathname.lastIndexOf('/');
     let page = pathname.substring(last - 1,last);
@@ -14,7 +14,7 @@ addEventListener('load', async()=>{
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundImage = 'url(../bg.jpg)';
 
-    const courses = (await(await fetch('https://regbadminton.com/api/?d=' + date)).json());
+    const courses = await(await fetch('https://regbadminton.com/api/?d=' + date)).json();
 
     if (page > courses.length) location = 'https://cityofsurrey.perfectmind.com/23615/Menu/BookMe4BookingPages/Classes'+
                                             '?calendarId=ec6defcd-4317-4bf3-a72e-a9c6b4e5c897'+
