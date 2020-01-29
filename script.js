@@ -1,4 +1,5 @@
 addEventListener('load', async()=>{
+    
     const pathname = location.pathname;
     const last = pathname.lastIndexOf('/');
     let page = pathname.substring(last - 1,last);
