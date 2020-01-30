@@ -3,12 +3,9 @@ addEventListener('load', async()=>{
   const pathname = location.pathname;
   const last = pathname.lastIndexOf('/');
   let page = pathname.substring(last - 1,last);
-  let date = 'tomorrow';
-
-  if (isNaN(page)){
-    page = page.charCodeAt(0) - 96;
-    date = 'today';
-  }
+  
+  let date = isNaN(page) ? 'today' : 'tomorrow';
+  page = date == 'today' ? page.charCodeAt(0) - 96 : page;
 
   document.body.style.backgroundPosition = 'center';
   document.body.style.backgroundSize = 'cover';
